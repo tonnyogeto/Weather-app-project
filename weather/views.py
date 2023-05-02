@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 import json
 import urllib.request
 
 # Create your views here.
+def home(request):
+    return HttpResponse('Welcomme Hoome')
+
 def index(request):
     if request.method=='POST':
         city = request.POST['city']
